@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="Javascript-Page-Styles.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Javascript Page</title>
+	</head>
+
+<body>
+
+<div class= "header">
+  <img src="https://cdn4.iconfinder.com/data/icons/scripting-and-programming-languages/512/js-512.png" height="50" width="50"><br><br>
+  <ul>
+    <li><a href="#home">Overview</a></li>
+    <li><a href="#home">Syntax</a></li>
+    <li><a href="#home">Objects</a></li>
+    <li><a href="#home">Booleans</a></li>
+    <li><a href="#home">Conditionals</a></li>
+    <li><a href="#home">Arrays</a></li>
+    <li><a href="#home">Exercises</a></li>
+    <li><a href="#home">Resources</a></li>
+</div>
+
+
+
+<div class="container-1">
+	<div id="circle">
+		<p class="p">Learn</p>
+	</div>
+<div id="circle">
+		<p class="p">Play</p>
+</div>
+<div id="circle">
+	<p class="p">Build</p>
+</div>
+			<h2>Sign Up Here!</h2>
+        <br>
+        <form>
+        First name:<br><br>
+      <input type="text" name="firstname"><br><br>
+        Email:<br><br>
+        <input type="text" name="emailaddress"><br><br>
+        <div>
+         <button onclick="changeText()">Submit</button>
+       </div>
+      </form>
+</div>
+<p><a href="#"> Back To the Top</a></p>
+
+<script>
+function changeText() {
+  var h2 = document.getElementById('container-1');
+  h2.innerHTML = "Thanks!";
+}
+</script>
+
+</html>
