@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+  <head>
+<title> Javascript Tutorial </title>
+  </head>
+
+  <body>
+
+<script language= "Javascript" type="text/Javascript">
+<!-- Hide Javascript
+//this script shows the maximum and minimum value of numbers that JS can produce
+document.write(Number.MAX_VALUE + "<br />");
+document.write(Number.MIN_VALUE + "<br />");
+
+
+//these exercises are meant to play with strings in JS
+//this one prints out the escaped characters
+var samp_str = "Here are some escaped character \" \' \\ "
+//document.write prints on the screen, and it's calling the var samp_str
+document.write(samp_str + "<br />");
+
+//define the variables
+var first_str = "First String";
+var second_str= "Second String";
+
+//created a new variable or object
+var combined = first_str + second_str;
+
+//prints the combined object
+document.write(combined + "<br />");
+
+//prints out the length of the combined strings
+document.write("Length of string: " + combined.length + "<br />");
+
+//prints out a piece of the string "combined", starting at index 6 and ending at 12. It prints out "String"
+document.write("Substring " + combined.substring(6,12) + "<br />");
+
+//prints out last character of the combined string
+document.write("Last character " + combined.charAt(combined.length-1) + "<br />");
+
+//prints index value of t (from First) in combined
+document.write("Index of T is: " + combined.indexOf('t') + " <br />");
+-->
+
+
+//Working with variables
+
+var str_var = "5";
+var num_var = 10;
+
+var total = str_var + num_var; // treats it all as a string
+
+var mult_total = num_var * str_var;
+
+//prints 5 + 10 = 105 because it's treating it like a string
+document.write("5 + 10 = " + total + "<br />");
+
+//prints 5 * 10 = 50
+document.write("5 * 10 = " + mult_total + "<br />");
+
+//the Number function treats the str_var like a number, and it converts it to a number vs a string
+total = num_var + Number(str_var);
+
+//prints 5 + 10 = 15
+document.write("5 + 10 = " + total + "<br />");
+
+
+var num_var2 = String(num_var);
+document.write(num_var + num_var + "<br />");
+document.write(num_var + num_var2 + "<br />");
+
+
+//setting up PI as a variable
+var float_var = 3.141592653;
+
+//toFixed(5) means that PI is going to stop 5 digits after the decimal
+var float_str = float_var.toFixed(5);
+
+document.write("Shortened PI " + float_str + "<br />");
+
+//parseInt cuts off everything after the decicmal and leaves the integer whole as 3
+document.write("Integer PI " + parseInt(float_str) + "<br />");
+
+//typeof prints out what data type it is (float_str = string)
+document.write("Datatype of float_str " + typeof(float_str) + "<br />");
+
+//typeof prints what data type is is (float_var= number)
+document.write("Datatype of float_var " + typeof(float_var) + "<br />");
+
+//Boolean variables
+
+bool_var = Boolean(23);
+
+//prints true. Everything that is not 0 or not a number is true
+document.write("Boolean of 23 is " + bool_var + "<br />");
+
+//comparison operators
+
+var rand_num1 = 5;
+var rand_num2 = 10;
+
+document.write("Is 5 > 10 " + (rand_num1 > rand_num2) + "<br />");
+document.write("Is 5 >= 10 " + (rand_num1 >= rand_num2) + "<br />");
+document.write("Is 5 < 10 " + (rand_num1 < rand_num2) + "<br />");
+document.write("Is 5 <= 10 " + (rand_num1 <= rand_num2) + "<br />");
+document.write("Is 5 == 10 " + (rand_num1 == rand_num2) + "<br />");
+document.write("Is 5 != 10 " + (rand_num1 != rand_num2) + "<br />");
+
+//logical operators
+
+
+//this checks if both 5 is less than 10, and 5 is not equal to 10 and spits out true or false
+document.write("Is 5 < 10 and 5 !=10 " + ((rand_num1 != rand_num2) && (rand_num1 != rand_num2)) + "<br />");
+
+//Arrays
+
+//create an array like so
+var vehicles = newArray("car", "truck", "van", "bike");
+
+document.write("The second item in the array is: " + vehicles[1] + "<br />");
+
+for (i in vehicles) {
+  document.write("Value in array " + vehicles[i] + "<br />");
+}
+
+//conditional operators
+
+var rand_var1 = (5 > 10) ? "5 is less than 10" : "5 is greater than 10";
+
+if (5 > 10) {
+  document.write("5 is greater than 10 " + "<br />");
+} else if {
+  document.write("5 is less than 10 " + "<br />");
+} else {
+  document.write("5 is greater than 10 " + "<br />");
+}
+
+//switch statement
+
+
+var state = "Penn";
+
+switch (state) {
+  case "California":
+  document.write("Warmer than me" + "<br />");
+    break;
+  case "Penn":
+  document.write("Same as me" + "<br />");
+
+  default:
+  document.write("I do not know" + "<br />");
+
+}
+
+
+//Looping in Javascript
+
+//first way: count 1 to ten
+
+var count =1;
+
+while( count <= 10){
+  document.write(count + "<br />");
+  count++;
+}
+//prints 1 to 10
+
+//counting in even numbers using the 'continue' statement
+
+while( count <= 10){
+  if(count == 6){
+    break;          //break makes you jump out of the loop altogether, this prints 6
+  }
+  if(count % 2) {
+    count++;        // in situations where it's even, it's gonna count
+    continue;       //this jumps back to the initial statement (while), this prints out even numbers
+  }
+  document.write(count + "<br />");
+  count++;
+}
+
+
+//Do/while loop
+
+var count1 = 10;
+
+do {
+  document.write(count1 + "<br />");
+  count--;
+} while (count > 10);
+
+
+
+//for statement: you create the variables inside the brackets
+
+for(var count=0; count <== 10; count++){
+  document.write(count + "<br />");
+}
+
+//how to embed code from an external Javascript file
+
+<script language="Javascript" src="filename.js"></script>
+
+
+
+
+
+
+</script>
+<noscript>
+  <h3>This site requires Javascript</h3>
+</noscript>
+
+
+  </body>
+
+  </html>
